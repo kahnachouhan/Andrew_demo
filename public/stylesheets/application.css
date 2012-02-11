@@ -1,0 +1,25 @@
+body{
+  font-family: 'Helvetica Neue','HelveticaNeue',helvetica,arial,sans-serif;
+}
+
+fieldset{
+  margin: 0;
+  padding: 0;
+}
+
+p{
+  color: #939393;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+ul{
+  color: #5C5C5C;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 3px;
+}
+
+li{
+  padding: 9px;
+}

@@ -1,0 +1,15 @@
+<form class="new_web_url">
+  <div class="field">
+   <label for="web_url_url">Website URL:</label><br />
+   <input type="text" size="30" name="web_url_url" id="web_url_url">
+  </div>
+  <div class="actions">
+    <input type="submit" value="Create Web url" name="commit">
+  </div>
+</form>
+<ul>
+  <% @web_urls.each do |web_url|%>
+   <li><%= web_url.url_domain%></li>
+  <% end %>
+</ul>
+

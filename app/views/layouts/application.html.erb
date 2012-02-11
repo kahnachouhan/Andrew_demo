@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AndrewDemo</title>
+  <%= stylesheet_link_tag :all, :application, :web_url %>
+  <%= javascript_include_tag :defaults, "web_url.js" %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
