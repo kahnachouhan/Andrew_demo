@@ -26,3 +26,22 @@
   padding: 25px 30px;
 }
 
+.su_button {
+  margin-top: 17px;
+  margin-bottom: 10px;
+}
+
+.su_button input[type=submit] {
+  background-color: #02A1D4;
+  margin-bottom: 3px;
+  color: #FFFFFF;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  -moz-transition: background-color 200ms linear 0s;
+  background-image: -moz-linear-gradient(center top , transparent, rgba(154, 154, 154, 0.1));
+  border: 0 none;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.15);
+  font-weight: bold;
+}
+

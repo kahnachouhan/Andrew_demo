@@ -1,5 +1,6 @@
 $(document).ready(function() {
   var url_list = []; 
+  tips = $("#error_message");
   $('form.new_web_url').submit(function(){
     var url = $("#web_url_url").val();
     if (/^(http|https|ftp):\/\/(([A-Z0-9][A-Z0-9_-]*)(\.[A-Z0-9][A-Z0-9_-]*)+)(:(\d+))?\/?/i.test(url)) {
@@ -11,6 +12,12 @@ $(document).ready(function() {
       $("ul").prepend("<li>"+ display_url +"</li>");
       url_list.push(url);
       $("#web_url_url").val("");
+      tips.text("");
+    }else{
+      if(url.length == 0)
+        tips.text("URL cannot be blank");
+      else
+        tips.text("URL does not appear to be valid");
     }
     return false;
   });
