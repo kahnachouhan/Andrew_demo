@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var url_list = []; 
+  var url_list = [];
   tips = $("#error_message");
   $('form.new_web_url').submit(function(){
     var url = $("#web_url_url").val();
@@ -9,10 +9,15 @@ $(document).ready(function() {
         display_url = url_domain[1].replace("www.","").split('/')[0];
       else
         display_url = url_domain[0].replace("www.","").split('/')[0];
-      $("ul").prepend("<li>"+ display_url +"</li>");
-      url_list.push(url);
-      $("#web_url_url").val("");
-      tips.text("");
+      if($.inArray(display_url, collection_urls) > -1){
+        tips.text("URL already added");
+      }else{
+        $("ul").prepend("<li>"+ display_url +"</li>");
+        url_list.push(url);
+        $("#web_url_url").val("");
+        tips.text("");
+        collection_urls.push(display_url);
+      }
     }else{
       if(url.length == 0)
         tips.text("URL cannot be blank");
